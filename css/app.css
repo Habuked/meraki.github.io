@@ -1,0 +1,123 @@
+
+
+:root{
+    --bs-blue: #037bc0; /*Reescrbiendo con CUSTOM PROPERTYS para usar colores diferentes del bootstrap*/
+    --bs-green: #8cbc00;
+
+
+}
+
+html{
+    font-size: 62.5%; /*Esto sirve para reescribir los rem para que valgan - 1rem = 10px*/
+}
+
+body{
+
+   /*  font-family: 'Courier New', Courier, monospace; Fuente para todo el proyecto*/
+    font-size: 1.6rem;
+}
+
+/* para dejar configurado el tipo de fuente en cada H1 yo aun no lo hare
+
+h1, h2, h3{
+    font-family: el que saque de Google Font ;
+}
+
+*/
+
+
+h1{
+
+    font-size : 3.8rem;
+
+}
+
+/*Este media query es para cuando el tamano sea de 768px hasta mas arriba el FONT SIZE sera de 5 rem
+Para mas pequenos el FONT-SIZE sera de 3.8rem
+*/
+
+@media (min-width: 768px){
+    h1{
+        font-size : 5rem;
+    }
+}
+
+
+h2{
+
+    font-size : 3.2rem;
+
+}
+
+@media (min-width: 768px){
+    h2{
+        font-size : 4rem;
+    }
+}
+
+h3{
+
+    font-size : 2.4rem;
+
+}
+
+@media (min-width: 768px){
+    h3{
+        font-size : 3rem;
+    }
+}
+
+
+.text-primary{ /*Reescribo el text-primary y el important para obligar el cambio*/
+    color: var(--bs-blue)!important;
+}
+
+.nombre-sitio{
+    /* 
+        Si desea manipular con CSS el nombre sitio MERAKI VACATION
+        cuando la web es minimizada
+    */
+}
+
+.btn-success{
+    background-color: var(--bs-green)!important;
+}
+
+.bg-primary{
+    background-color: var(--bs-blue)!important;
+}
+
+
+/*
+    background-size: cover es lo que ajusta la imagen cuando el dispositivo es pequeno
+    background-position: center center lo centra 
+    background-repeat: no-repeat normalmente las img se repiten con esto lo evitamos
+*/
+.hero{
+    background: url(../img/principal.jpg);
+    height: 25rem;
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px){
+    .hero{
+        height: 55rem;
+    }
+}
+
+/* Productos */
+
+/*
+    Para dispositivos medianos y superiores hace lo siguiente
+    la imagen la recorta 43rem de altura luego el ancho lo seteo al 100% para que ocupe el espacio disponible
+    object-fit:cover sirve para no perder la proporcion y ocupe el 100%
+*/
+@media (min-width: 768px ){
+    .producto img{
+        height: 43rem;
+        width: 100%;
+        object-fit: cover;
+    }
+} 

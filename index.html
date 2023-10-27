@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki Vacations</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+    <header class="py-5 mx-5">
+        <div class="row">
+            <img class="img-fluid" src="img/logo final.jpg" style="width: 250px;">
+        </div>
+
+    </header>
+
+    <!--
+        border-top crea una linea de borde
+        py-4 el padding de 4 para darle separacion
+    -->
+    <div class="border-top py-4">
+        <!--
+            navbar le da estilo el boton de Hamburgues corre total a la derecha
+            navbar-expand-lg que se deshabilite el boton de hambuguesa en dispositivos grandes
+            container para centrarlo
+            navbar-light para visualizar el icono
+
+        -->
+        <div class="navbar navbar-expand-lg container navbar-light">
+
+            <!--
+                navbar-brand es la marca de la empresa tiene ciertos formatos
+                d-lg-none para que cuando la pantalla crezca en tamano no se muestre el <a></a>
+                fs-2 le aumenta el Font Size a 2
+                fw-bold el Font Weight a BOLD
+                text-upperca lo hace mayuscula
+            -->
+
+            <a class="navbar-brand nombre-sitio d-lg-none fs-2 fw-bold text-uppercase" href="index.html">
+                Meraki Vacations
+            </a>
+
+            <!--
+                navbar-toggler habilita las opciones de Collapse plugin
+                data-bs-toggle = "collapse" habilita el API de bootstrap
+                data-bs-target = #navegacion apunta al objeto que debe ocultar en este caso el div de navegacion
+            -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
+
+                <!--
+                    nav-bar-toggler-icon muestra el cuadro de los menu tipo hamburguesa
+                -->
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--
+                id="navegacion" para que se asocie con el boton
+                collapse navbar-collapse para que tenga la transicion
+
+            -->
+
+            <div id="navegacion" class="collapse navbar-collapse">
+                <!--navbar-nav de estilos de forma vertical
+                container los agrupa
+                text-center los centra
+                d-flex apertura flexbox
+                flex-md-row contenido del nav en dispositivo medio hacia arriba coja los item agrupados en fila
+                justity-content-md-between los separa dentro del NAV pero aplica para tamano medio hacia arriba
+                -->
+                <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
+
+                    <!--
+                        text-dark color negro
+                        text-decoration-none le quita el subrayado
+                    -->
+            
+                    <a class="text-dark text-decoration-none" href="#">Inicio</a>
+                    <a class="text-dark text-decoration-none" href="#">Paquetes Turístico</a>
+                    <a class="text-dark text-decoration-none" href="#">Nosotros</a>
+                    <a class="text-dark text-decoration-none" href="#">Contacto</a>
+                </nav>
+            </div>          
+        </div>
+    </div>
+
+   <div class="hero"></div> 
+
+   <!--
+    container para agruparlo en el contenedor
+    container-xl para evitar esos extranos saltos al reducir la pantalla
+   -->
+   <main class="container-xl py-5">
+        <h2 class="text-center my-5">Paquetes Turístico</h2>
+
+        <!--
+            Row para crear una fila
+                dentro de la fila de las 12 col de bootstrap uso 8 para la imagen y 4 para el contenido
+                OJO que el col-md- es para que esta configuracion sirve desde dispositivos medianos hacia mas grandes
+                en pequenos se agruparan uno de bajo del otro
+            g-0 gutter la separacion entre columnas con eso lo remueves
+        -->
+        <div class="row g-0 pt-5 mb-4">
+            <!--
+                creo clase de producto para manipular el grid porque el mismo crece segun el tamano de la imagen
+            -->
+            <div class="col-md-8 producto">
+                <!-- img-fluid permite las imagenes responsive-->
+                <img class="img-fluid" src="img/Panama y Cartagena.jpg" alt="Panama y Cartagena">
+            </div>
+
+            <!--
+                p-5 padding en toda las direcciones de 5
+                d-flex habilito flexbox
+                flex-column cambio la direccion de los elementos a columna 
+                justify-content-center aqui los justifico de forma vartical
+            -->
+            <div class="col-md-4 bg-primary text-center p-5 text-white d-flex flex-column justify-content-center">
+                <h3>Panama & Cartagena</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, rem voluptatum? 
+                    Voluptas aperiam deleniti ullam perferendis assumenda.
+                </p>
+                <p class="fs-1 fw-bold">Desde $505 por persona</p>
+                <!--
+                    btn habilita el <a> como boton le da el estilo
+                    bt-success le da el estilo CSS de boton success
+                -->
+                <a class="btn btn-success fs-3 fw-bold text-uppercase py-3" href="#">Mas informacion</a>
+            </div>  
+        </div>
+
+
+        <!--
+            Ojo para la siguiente fila creo un nuevo <div class="row"></div>
+            dentro de este uso de las 12 col, 6 y 6 para cada elemento
+        -->
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <!--
+                    Uso card porque ya tiene estilos que distribuyen el contenido de forma vertical
+                    que es lo que necesito
+                -->
+                <div class="card">
+                    <img src="img/Republica dominicana.jpg" alt="Republica Dominicana">
+
+                    <!--
+                        card-body le agrega estilo como espacio a los costados
+                        p-5 mas padding adicional al del card-body
+                    -->
+
+                    <div class="card-body text-center bg-primary text-white p-5">
+                        <h3>Rep. Dominicana Carnaval 2024</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, rem voluptatum? 
+                            Voluptas aperiam deleniti ullam perferendis assumenda.
+                        </p>
+                        <p class="fs-1 fw-bold">Desde $909 por persona</p>
+                        <!--
+                            btn habilita el <a> como boton le da el estilo
+                            bt-success le da el estilo CSS de boton success
+
+                            w-100 para que el elemento <a> que es un btn tome todo el espacio disponible
+                                d-block tambien funcionaria y haria el mismo efecto
+
+                        -->
+                        <a class="btn btn-success fs-3 fw-bold text-uppercase w-100 py-3" href="#">Mas informacion</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/Cartagena.jpg" alt="Cartagena">
+
+                    <!--
+                        card-body le agrega estilo como espacio a los costados
+                        p-5 mas padding adicional al del card-body
+                    -->
+
+                    <div class="card-body text-center bg-primary text-white p-5">
+                        <h3>Cartagena Carnaval 2024</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, rem voluptatum? 
+                            Voluptas aperiam deleniti ullam perferendis assumenda.
+                        </p>
+                        <p class="fs-1 fw-bold">Desde $799 por persona</p>
+                        <!--
+                            btn habilita el <a> como boton le da el estilo
+                            bt-success le da el estilo CSS de boton success
+
+                            w-100 para que el elemento <a> que es un btn tome todo el espacio disponible
+                                d-block tambien funcionaria y haria el mismo efecto
+                                
+                        -->
+                        <a class="btn btn-success fs-3 fw-bold text-uppercase w-100 py-3" href="#">Mas informacion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+
+            Ultima fila pero dividido en 3 columnas, de las 12 col creo el ROW y 3 div con col-md-4
+
+        -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/Panama fin de ano.jpg" alt="Cartagena">
+
+                    <!--
+                        card-body le agrega estilo como espacio a los costados
+                        p-5 mas padding adicional al del card-body
+                    -->
+
+                    <div class="card-body text-center bg-primary text-white p-5">
+                        <h3>Panamá Fin de año</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, rem voluptatum? 
+                            Voluptas aperiam deleniti ullam perferendis assumenda.
+                        </p>
+                        <p class="fs-1 fw-bold">Desde $1055 por persona</p>
+                        <!--
+                            btn habilita el <a> como boton le da el estilo
+                            bt-success le da el estilo CSS de boton success
+
+                            w-100 para que el elemento <a> que es un btn tome todo el espacio disponible
+                                d-block tambien funcionaria y haria el mismo efecto
+                                
+                        -->
+                        <a class="btn btn-success fs-3 fw-bold text-uppercase w-100 py-3" href="#">Mas informacion</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/miami.jpg" alt="Cartagena">
+
+                    <!--
+                        card-body le agrega estilo como espacio a los costados
+                        p-5 mas padding adicional al del card-body
+                    -->
+
+                    <div class="card-body text-center bg-primary text-white p-5">
+                        <h3>Miami Sale !!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, rem voluptatum? 
+                            Voluptas aperiam deleniti ullam perferendis assumenda.
+                        </p>
+                        <p class="fs-1 fw-bold">Desde $799 por persona</p>
+                        <!--
+                            btn habilita el <a> como boton le da el estilo
+                            bt-success le da el estilo CSS de boton success
+
+                            w-100 para que el elemento <a> que es un btn tome todo el espacio disponible
+                                d-block tambien funcionaria y haria el mismo efecto
+                                
+                        -->
+                        <a class="btn btn-success fs-3 fw-bold text-uppercase w-100 py-3" href="#">Mas informacion</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/Medellin Luces.jpeg" alt="Cartagena">
+
+                    <!--
+                        card-body le agrega estilo como espacio a los costados
+                        p-5 mas padding adicional al del card-body
+                    -->
+
+                    <div class="card-body text-center bg-primary text-white p-5">
+                        <h3>Medellin Luces</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, rem voluptatum? 
+                            Voluptas aperiam deleniti ullam perferendis assumenda.
+                        </p>
+                        <p class="fs-1 fw-bold">Desde $799 por persona</p>
+                        <!--
+                            btn habilita el <a> como boton le da el estilo
+                            bt-success le da el estilo CSS de boton success
+
+                            w-100 para que el elemento <a> que es un btn tome todo el espacio disponible
+                                d-block tambien funcionaria y haria el mismo efecto
+                                
+                        -->
+                        <a class="btn btn-success fs-3 fw-bold text-uppercase w-100 py-3" href="#">Mas informacion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
